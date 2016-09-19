@@ -23,62 +23,6 @@ defined('_JEXEC') or die;
 	<hr class="hr-condensed" />
 	<div class="control-group">
 		<div class="control-label">
-			<?php echo $this->form->getLabel('db_type'); ?>
-		</div>
-		<div class="controls">
-			<?php echo $this->form->getInput('db_type'); ?>
-			<p class="help-block">
-				<?php echo JText::_('INSTL_DATABASE_TYPE_DESC'); ?>
-			</p>
-		</div>
-	</div>
-	<div class="control-group">
-		<div class="control-label">
-			<?php echo $this->form->getLabel('db_host'); ?>
-		</div>
-		<div class="controls">
-			<?php echo $this->form->getInput('db_host'); ?>
-			<p class="help-block">
-				<?php echo JText::_('INSTL_DATABASE_HOST_DESC'); ?>
-			</p>
-		</div>
-	</div>
-	<div class="control-group">
-		<div class="control-label">
-			<?php echo $this->form->getLabel('db_user'); ?>
-		</div>
-		<div class="controls">
-			<?php echo $this->form->getInput('db_user'); ?>
-			<p class="help-block">
-				<?php echo JText::_('INSTL_DATABASE_USER_DESC'); ?>
-			</p>
-		</div>
-	</div>
-	<div class="control-group">
-		<div class="control-label">
-			<?php echo $this->form->getLabel('db_pass'); ?>
-		</div>
-		<div class="controls">
-			<?php // Disables autocomplete ?> <input type="password" style="display:none">
-			<?php echo $this->form->getInput('db_pass'); ?>
-			<p class="help-block">
-				<?php echo JText::_('INSTL_DATABASE_PASSWORD_DESC'); ?>
-			</p>
-		</div>
-	</div>
-	<div class="control-group">
-		<div class="control-label">
-			<?php echo $this->form->getLabel('db_name'); ?>
-		</div>
-		<div class="controls">
-			<?php echo $this->form->getInput('db_name'); ?>
-			<p class="help-block">
-				<?php echo JText::_('INSTL_DATABASE_NAME_DESC'); ?>
-			</p>
-		</div>
-	</div>
-	<div class="control-group">
-		<div class="control-label">
 			<?php echo $this->form->getLabel('db_prefix'); ?>
 		</div>
 		<div class="controls">

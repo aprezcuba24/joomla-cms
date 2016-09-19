@@ -122,7 +122,13 @@ class InstallationModelSetup extends JModelBase
 		$app = JFactory::getApplication();
 
 		// Get the posted values from the request and validate them.
-		$data   = $app->input->post->get('jform', array(), 'array');
+		$data   = array_merge($app->input->post->get('jform', array(), 'array'), [
+            'db_type' => 'mysql',
+            'db_host' => 'localhost',
+            'db_user' => 'root',
+            'db_pass' => '',
+            'db_name' => 'joomla_install',
+        ]);
 		$return = $this->validate($data, $page);
 
 		// Attempt to save the data before validation.
