@@ -1,0 +1,4 @@
+jommla:
+    db_user: root
+    db_pass:
+    db_name: joomla_install

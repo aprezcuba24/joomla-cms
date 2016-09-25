@@ -121,14 +121,16 @@ class InstallationModelSetup extends JModelBase
 		/* @var InstallationApplicationWeb $app */
 		$app = JFactory::getApplication();
 
-		// Get the posted values from the request and validate them.
-		$data   = array_merge($app->input->post->get('jform', array(), 'array'), [
+        $fileName = '/var/www/html/JAIRO/Joomla_modificar_install/installation/setup_data.yml';
+        $fileData = file_get_contents($fileName);
+        $dataInstall = \Symfony\Component\Yaml\Yaml::parse($fileData);
+        $dataInstall = array_merge([
             'db_type' => 'mysql',
             'db_host' => 'localhost',
-            'db_user' => 'root',
-            'db_pass' => '',
-            'db_name' => 'joomla_install',
-        ]);
+        ], $dataInstall['jommla']);
+
+		// Get the posted values from the request and validate them.
+		$data   = array_merge($app->input->post->get('jform', array(), 'array'), $dataInstall);
 		$return = $this->validate($data, $page);
 
 		// Attempt to save the data before validation.
